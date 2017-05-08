@@ -1,20 +1,16 @@
 # Errors
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-The Kittn API uses the following error codes:
-
+The Amplo API uses the following error codes:
 
 Error Code | Meaning
 ---------- | -------
-400 | Bad Request -- Your request sucks
-401 | Unauthorized -- Your API key is wrong
-403 | Forbidden -- The kitten requested is hidden for administrators only
-404 | Not Found -- The specified kitten could not be found
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method
-406 | Not Acceptable -- You requested a format that isn't json
-410 | Gone -- The kitten requested has been removed from our servers
-418 | I'm a teapot
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
+400 | Bad Request -- The parameters of your request were incorrect or malformed
+401 | Unauthorized -- Incorrect API Key provided
+403 | Forbidden -- The API Key is correct, but the request is for something the Key does not have permission to view.
+404 | Not Found -- The specified object could not be found
+405 | Method Not Allowed -- The action requested could not be performed
+406 | Not Acceptable -- The request was not correctly formatted JSON
+410 | Gone -- The object requested has been removed from our servers
+429 | Too Many Requests -- Rate limit exceeded.  
+500 | Internal Server Error -- An error occurred on our servers.  Please wait and try again later, or contact support.
 503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.

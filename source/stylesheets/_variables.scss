@@ -23,20 +23,20 @@ under the License.
 
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #393939 !default;
+$nav-bg: #353f52 !default;
 $examples-bg: #393939 !default;
 $code-bg: #292929 !default;
 $code-annotation-bg: #1c1c1c !default;
 $nav-subitem-bg: #262626 !default;
-$nav-active-bg: #2467af !default;
+$nav-active-bg: #8460EA !default;
 $lang-select-border: #000 !default;
 $lang-select-bg: #222 !default;
 $lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
 $lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
-$main-bg: #eaf2f6 !default;
-$aside-notice-bg: #8fbcd4 !default;
-$aside-warning-bg: #c97a7e !default;
-$aside-success-bg: #6ac174 !default;
+$main-bg: #f9f9f9 !default;
+$aside-notice-bg: #73d7fe !default;
+$aside-warning-bg: #FF7028 !default;
+$aside-success-bg: #82C600 !default;
 $search-notice-bg: #c97a7e !default;
 
 
@@ -57,7 +57,8 @@ $examples-width: 50% !default; // portion of the screen taken up by code example
 $logo-margin: 20px !default; // margin between nav items and logo, ignored if search is active
 $main-padding: 28px !default; // padding to left and right of content & examples
 $nav-padding: 15px !default; // padding to left and right of navbar
-$nav-v-padding: 10px !default; // padding used vertically around search boxes and results
+$nav-v-padding: 20px !default; // padding used vertically around search boxes and results
+$nav-item-v-padding: 5px !default; // padding used vertically around search boxes and results
 $nav-indent: 10px !default; // extra padding for ToC subitems
 $code-annotation-padding: 13px !default; // padding inside code annotations
 $h1-margin-bottom: 21px !default; // padding under the largest header tags
@@ -68,14 +69,20 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
-  font-size: 13px;
+  font-family: "proxima_nova_alt_rgregular", sans-serif;
+  font-size: 14px;
 }
 
 %header-font {
   @extend %default-font;
   font-weight: bold;
 }
+
+%navbar-font {
+  @extend %default-font;
+  font-size: 18px;
+}
+
 
 %code-font {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;

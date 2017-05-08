@@ -2,6 +2,7 @@
 @import 'normalize';
 @import 'variables';
 @import 'icon-font';
+@import 'proxima-nova';
 
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
@@ -39,6 +40,10 @@ html, body {
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
 
+#toc {
+  @extend %navbar-font;
+}
+
 #toc > ul > li > a > span {
   float: right;
   background-color: #2484FF;
@@ -73,6 +78,7 @@ html, body {
   // language selector for mobile devices
   .lang-selector {
     display: none;
+
     a {
       padding-top: 0.5em;
       padding-bottom: 0.5em;
@@ -83,6 +89,8 @@ html, body {
   &>img {
     display: block;
     max-width: 100%;
+    width: $nav-width - 60;
+    padding: 30px;
   }
 
   &>.search {
@@ -103,7 +111,7 @@ html, body {
 
     &:before {
       position: absolute;
-      top: 17px;
+      top: 26px;
       left: $nav-padding;
       color: $nav-text;
       @extend %icon-search;
@@ -147,7 +155,7 @@ html, body {
 
 
   .tocify-item>a, .toc-footer li {
-    padding: 0 $nav-padding 0 $nav-padding;
+    padding: $nav-item-v-padding $nav-padding $nav-item-v-padding $nav-padding;
     display: block;
     overflow-x: hidden;
     white-space: nowrap;
@@ -186,7 +194,7 @@ html, body {
     font-weight: 500;
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     // for embossed look:
@@ -296,9 +304,11 @@ html, body {
     float:left;
     color: $lang-select-text;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 10px 20px;
     line-height: 30px;
     outline: 0;
+    font-size: 18px;
+    text-transform: capitalize;
 
     &:active, &:focus {
       background-color: $lang-select-pressed-bg;
@@ -339,7 +349,6 @@ html, body {
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
-    text-shadow: $main-embossed-text-shadow;
 
     @extend %left-col;
   }
@@ -470,27 +479,27 @@ html, body {
   aside {
     padding-top: 1em;
     padding-bottom: 1em;
-    text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
 
     &.warning {
       background-color: $aside-warning-bg;
-      text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
     }
 
     &.success {
       background-color: $aside-success-bg;
-      text-shadow: 0 1px 0 lighten($aside-success-bg, 15%);
     }
   }
 
   aside:before {
     vertical-align: middle;
     padding-right: 0.5em;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   aside.notice:before {
@@ -510,7 +519,6 @@ html, body {
     margin: -2px;
     border-radius: 4px;
     border: 1px solid #F7E633;
-    text-shadow: 1px 1px 0 #666;
     background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
 }
@@ -533,7 +541,6 @@ html, body {
     clear:right;
 
     box-sizing: border-box;
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 
     @extend %right-col;
 
@@ -624,4 +631,8 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+.highlight .s1, .highlight .s2{
+  color: #FF7028;
 }
