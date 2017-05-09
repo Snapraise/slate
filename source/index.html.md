@@ -359,9 +359,11 @@ These endpoint retrieves a paginated list of donations.
 ### HTTP Request
 
 This URL will fetch all donations for all Campaigns:
+
 `GET https://app.amploadvance.com/api/v1/donations`
 
 This URL will fetch only donations made towards a specific Campaign:
+
 `GET https://app.amploadvance.com/api/v1/campaigns/<CAMPAIGN_ID>/donations`
 
 ### URL Parameters
