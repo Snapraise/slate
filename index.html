@@ -842,6 +842,91 @@ be able to paginate through results using the <code class="prettyprint">page</co
 </tr>
 </tbody></table>
 
+          <h1 id="webhooks">Webhooks</h1>
+
+<blockquote>
+<p>The following is an example of JSON that would be POSTed to your webhook URL</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1122334455667788"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"beneficiary_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Campaign"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"beneficiary_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111222333444555"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"public"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"donation_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cc"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"import_1234"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"recurring"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"auth_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transact_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcdefg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I love Amplo U"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"check_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"credit_card_fingerprint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aaaaabbbbbcccccdddddeeeee"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tickets"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"refundable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"refund_donation_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"appeal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"causes_allocated_to"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The following is an example of JSON that would be POSTed to your Webhook URL after an object deletion occurs</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1494355936</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Webhooks allow Amplo to push data into your system in a near real-time capacity.
+This allows you to supplement your API usage or fully change the dynamic of your API
+usage from primarily pull-based (you make a request, we send the data back) to
+push-based (when something interesting in the system happens, we let you know).</p>
+
+<p>For example, when a Donation happens in Amplo&rsquo;s system, the Amplo API will POST related
+JSON data to your registered Webhook URL for your immediate consumption (a.k.a. a callback).  </p>
+
+<p>Webhook URLs can be registered on the Entity level.  Contact support to set one up.</p>
+
+<h3 id="events">Events</h3>
+
+<p>Create, update and delete actions trigger Webhook callbacks. This includes actions performed
+through the API itself.  The following objects are Webhook enabled:</p>
+
+<table><thead>
+<tr>
+<th>Object</th>
+<th>Conditions</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Campaign</td>
+<td>Core Campaign attributes (rollup stats changes won&rsquo;t trigger callbacks)</td>
+</tr>
+<tr>
+<td>Donation</td>
+<td>Any modification to a Donation object triggers a callback</td>
+</tr>
+</tbody></table>
+
+<h3 id="format">Format</h3>
+
+<p>The POSTed JSON data will largely follow the same format as the main API.  The data will
+be equivalent to what you would get on a single object GET request.  ID and Type fields
+can be used to distinguish the nature of the data, since all objects are posted to the same
+single Webhook URL.  </p>
+
           <h1 id="errors">Errors</h1>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/campaigns"</span>
 </code></pre>
