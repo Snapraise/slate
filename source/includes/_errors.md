@@ -1,5 +1,21 @@
 # Errors
 
+
+```shell
+curl "https://app.amploadvance.com/api/v1/campaigns"
+```
+
+> The above command, missing a header on the request, will return a 401 response with the following JSON:
+
+```json
+{
+  "errors": [{
+    "status": 401,
+    "title": "Unauthorized - Incorrect API Key provided"
+  }]
+}
+```
+
 The Amplo API uses the following error codes:
 
 Error Code | Meaning

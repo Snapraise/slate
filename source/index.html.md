@@ -26,6 +26,9 @@ be fully backwards compatible.
 
 Future functionality may also include language wrappers for the API.
 
+The Amplo API follows the [JSON API Specification Format](http://jsonapi.org/).
+If there are any discrepancies with compatibility, please report it by contacting support.
+
 
 # Rate Limits
 
@@ -83,32 +86,39 @@ curl "https://app.amploadvance.com/api/v1/campaigns"
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": "asdfasdfasdfasdf",
-    "name": "Amplo University Campaign 1",
-    "url": "https://amplouniversity.com/pages/campaign-1-page",
-    "start_date": 1494278379,
-    "end_date": 149428000,
-    "status": "active",
-    "total_votes": 10,
-    "total_donations": 10,
-    "total_raised": 300,
-    "external_id": "abc_123"
-  },
-  {
-    "id": "111222333444555",
-    "name": "Amplo University Campaign 2",
-    "url": "https://amplouniversity.com/pages/campaign-2-page",
-    "start_date": 1494278379,
-    "end_date": 149428000,
-    "status": "active",
-    "total_votes": 11,
-    "total_donations": 11,
-    "total_raised": 270,
-    "external_id": "abc_123"
+{
+  "data": [
+    {
+      "id": "asdfasdfasdfasdf",
+      "name": "Amplo University Campaign 1",
+      "url": "https://amplouniversity.com/pages/campaign-1-page",
+      "start_date": 1494278379,
+      "end_date": 149428000,
+      "status": "active",
+      "total_votes": 10,
+      "total_donations": 10,
+      "total_raised": 300,
+      "external_id": "abc_123"
+    },
+    {
+      "id": "111222333444555",
+      "name": "Amplo University Campaign 2",
+      "url": "https://amplouniversity.com/pages/campaign-2-page",
+      "start_date": 1494278379,
+      "end_date": 149428000,
+      "status": "active",
+      "total_votes": 11,
+      "total_donations": 11,
+      "total_raised": 270,
+      "external_id": "abc_123"
+    }
+  ],
+  "meta":{
+    "pages": 1,
+    "count": 2,
+    "per_page": 100
   }
-]
+}
 ```
 
 This endpoint retrieves all campaigns.
@@ -138,25 +148,30 @@ curl "https://app.amploadvance.com/api/v1/campaigns/abcdefabcedfabcedf"
 
 ```json
 {
-  "id": "111222333444555",
-  "name": "Amplo University Campaign 2",
-  "url": "https://amplouniversity.com/pages/campaign-2-page",
-  "logo": "https://amplouniversity.com/logo.png",
-  "start_date": 1494278379,
-  "end_date": 149428000,
-  "status": "active",
-  "category": "Student Clubs and Organizations",
-  "campaign_type": "dollars",
-  "allow_subscriptions": true,
-  "total_votes": 11,
-  "total_donations": 11,
-  "total_raised": 270,
-  "average_donation": 25,
-  "join_code": 123456,
-  "external_id": "abc_123",
-  "goal": 1000,
-  "member_goal": 20,
-  "public": true
+  "data": {
+    "id": "111222333444555",
+    "type": "campaign",
+    "attributes": {
+      "name": "Amplo University Campaign 2",
+      "url": "https://amplouniversity.com/pages/campaign-2-page",
+      "logo": "https://amplouniversity.com/logo.png",
+      "start_date": 1494278379,
+      "end_date": 149428000,
+      "status": "active",
+      "category": "Student Clubs and Organizations",
+      "campaign_type": "dollars",
+      "allow_subscriptions": true,
+      "total_votes": 11,
+      "total_donations": 11,
+      "total_raised": 270,
+      "average_donation": 25,
+      "join_code": 123456,
+      "external_id": "abc_123",
+      "goal": 1000,
+      "member_goal": 20,
+      "public": true
+    }
+  }
 }
 ```
 
@@ -185,23 +200,32 @@ curl "https://app.amploadvance.com/api/v1/users/api@amploadvance.com"
 
 ```json
 {
-  "id": "111222333444555",
-  "first_name": "Joe",
-  "last_name": "Smith",
-  "email": "api@amploadvance.com",
-  "external_id": "1234_asdf",
-  "donations": [{
-      "id": "aabbccddeeffgg",
-      "beneficiary_type": "Campaign",
-      "beneficiary_id": "111222333444555",
-      "amount": 10,
-      "status": "paid",
-      "public": true,
-      "donation_type": "cc",
-      "external_id": "import_1234",
-      "recurring": false
-  }]
-
+  "data": {
+    "id": "111222333444555",
+    "type": "user",
+    "attributes": {
+      "first_name": "Joe",
+      "last_name": "Smith",
+      "email": "api@amploadvance.com",
+      "external_id": "1234_asdf",
+      "donations": {
+        "data": [{
+          "id": "aabbccddeeffgg",
+          "type": "donation",
+          "attributes": {
+            "beneficiary_type": "Campaign",
+            "beneficiary_id": "111222333444555",
+            "amount": 10,
+            "status": "paid",
+            "public": true,
+            "donation_type": "cc",
+            "external_id": "import_1234",
+            "recurring": false
+          }
+        }]
+      }
+    }
+  }
 }
 ```
 
@@ -237,11 +261,16 @@ curl "https://app.amploadvance.com/api/v1/users"
 
 ```json
 {
-  "id": "111222333444555",
-  "first_name": "Joe",
-  "last_name": "Smith",
-  "email": "api@amploadvance.com",
-  "external_id": "1234_asdf"
+  "data":{
+    "id": "111222333444555",
+    "type": "user",
+    "attributes": {
+      "first_name": "Joe",
+      "last_name": "Smith",
+      "email": "api@amploadvance.com",
+      "external_id": "1234_asdf"
+    }
+  }
 }
 ```
 
@@ -286,30 +315,43 @@ curl "https://app.amploadvance.com/api/v1/campaigns/asdfasdfasdfasdf/donations"
 > The above commands returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": "aabbccddeeffgg",
-    "beneficiary_type": "Campaign",
-    "beneficiary_id": "111222333444555",
-    "amount": 10,
-    "status": "paid",
-    "public": true,
-    "donation_type": "cc",
-    "external_id": "import_1234",
-    "recurring": false
-  },
-  {
-    "id": "11223344556677",
-    "beneficiary_type": "Campaign",
-    "beneficiary_id": "111222333444555",
-    "amount": 7,
-    "status": "paid",
-    "public": true,
-    "donation_type": "cc",
-    "external_id": "import_abcde",
-    "recurring": false
+{
+  "data":[
+    {
+      "id": "aabbccddeeffgg",
+      "type": "donation",
+      "attributes": {
+        "beneficiary_type": "Campaign",
+        "beneficiary_id": "111222333444555",
+        "amount": 10,
+        "status": "paid",
+        "public": true,
+        "donation_type": "cc",
+        "external_id": "import_1234",
+        "recurring": false
+      }
+    },
+    {
+      "id": "11223344556677",
+      "type": "donation",
+        "attributes": {
+        "beneficiary_type": "Campaign",
+        "beneficiary_id": "111222333444555",
+        "amount": 7,
+        "status": "paid",
+        "public": true,
+        "donation_type": "cc",
+        "external_id": "import_abcde",
+        "recurring": false
+      }
+    }
+  ],
+  "meta":{
+    "pages": 1,
+    "count": 2,
+    "per_page": 100
   }
-]
+}
 ```
 
 These endpoint retrieves a paginated list of donations.
@@ -369,27 +411,32 @@ curl "https://app.amploadvance.com/api/v1/donations/abcdefabcedfabcedf"
 
 ```json
 {
-  "id": "aabbccddeeffgg",
-  "user_id": "1122334455667788",
-  "beneficiary_type": "Campaign",
-  "beneficiary_id": "111222333444555",
-  "amount": 10,
-  "status": "paid",
-  "public": true,
-  "donation_type": "cc",
-  "external_id": "import_1234",
-  "recurring": false,
-  "auth_code": "123456",
-  "transact_id": "abcdefg",
-  "note": "I love Amplo U",
-  "check_number": null,
-  "credit_card_fingerprint": "aaaaabbbbbcccccdddddeeeee",
-  "tickets": [],
-  "refunded": false,
-  "refundable": true,
-  "refund_donation_ids": [],
-  "appeal": null,
-  "causes_allocated_to": []
+  "data": {
+    "id": "aabbccddeeffgg",
+    "type": "donation",
+    "attributes":{
+      "user_id": "1122334455667788",
+      "beneficiary_type": "Campaign",
+      "beneficiary_id": "111222333444555",
+      "amount": 10,
+      "status": "paid",
+      "public": true,
+      "donation_type": "cc",
+      "external_id": "import_1234",
+      "recurring": false,
+      "auth_code": "123456",
+      "transact_id": "abcdefg",
+      "note": "I love Amplo U",
+      "check_number": null,
+      "credit_card_fingerprint": "aaaaabbbbbcccccdddddeeeee",
+      "tickets": [],
+      "refunded": false,
+      "refundable": true,
+      "refund_donation_ids": [],
+      "appeal": null,
+      "causes_allocated_to": []
+    }
+  }
 
 }
 ```
@@ -424,25 +471,30 @@ curl "https://app.amploadvance.com/api/v1/campaigns/111222333444555/donations"
 
 ```json
 {
-  "id": "09876543210987654321",
-  "user_id": "aabbccddeeffgg",
-  "amount": 10,
-  "status": "paid",
-  "public": true,
-  "donation_type": "cash",
-  "external_id": "import_asdf",
-  "recurring": false,
-  "auth_code": null,
-  "transact_id": null,
-  "note": null,
-  "check_number": null,
-  "credit_card_fingerprint": null,
-  "tickets": [],
-  "refunded": false,
-  "refundable": true,
-  "refund_donation_ids": [],
-  "appeal": null,
-  "causes_allocated_to": []
+  "data": {
+    "id": "09876543210987654321",
+    "type": "donation",
+    "attributes": {
+      "user_id": "aabbccddeeffgg",
+      "amount": 10,
+      "status": "paid",
+      "public": true,
+      "donation_type": "cash",
+      "external_id": "import_asdf",
+      "recurring": false,
+      "auth_code": null,
+      "transact_id": null,
+      "note": null,
+      "check_number": null,
+      "credit_card_fingerprint": null,
+      "tickets": [],
+      "refunded": false,
+      "refundable": true,
+      "refund_donation_ids": [],
+      "appeal": null,
+      "causes_allocated_to": []
+    }
+  }
 }
 ```
 
@@ -454,6 +506,12 @@ This endpoint creates a new Donation in Amplo.  A few assumptions are made:
 ### HTTP Request
 
 `POST https://app.amploadvance.com/api/v1/campaigns/<CAMPAIGN_ID>/donations`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+CAMPAIGN_ID | The ID of the Campaign this Donation belongs to
 
 ### HTTP POST Parameters
 
