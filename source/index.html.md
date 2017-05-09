@@ -133,6 +133,8 @@ Parameter | Default | Required? | Type | Description
 --------- | ------- | --------- | ---- | -----------
 page | 0 | false | **integer** | Page number.  Increment and call again to fetch more Campaigns if there are multiple pages in the results.
 
+Default Sort Order: The object's creation date, ascending.
+
 <aside class="success">
 On the Amplo API, the first page is page number 0!
 </aside>
@@ -401,6 +403,7 @@ last_updated_start | false | 0 |  **timestamp** | UNIX Timestamp used to limit t
 last_updated_end | false | current timestamp | **timestamp** | UNIX Timestamp used to limit the list of Donations.
 page | false | 0 |  **integer** | The results page; used to
 
+Default Sort Order: The Object's last updated at timestamp in descending order.
 
 ## Get a Specific Donation
 
