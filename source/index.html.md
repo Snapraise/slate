@@ -149,7 +149,7 @@ curl "https://app.amploadvance.com/api/v1/campaigns/abcdefabcedfabcedf"
 ```json
 {
   "data": {
-    "id": "111222333444555",
+    "id": "abcdefabcedfabcedf",
     "type": "campaign",
     "attributes": {
       "name": "Amplo University Campaign 2",
@@ -334,7 +334,7 @@ curl "https://app.amploadvance.com/api/v1/campaigns/asdfasdfasdfasdf/donations"
     {
       "id": "11223344556677",
       "type": "donation",
-        "attributes": {
+      "attributes": {
         "beneficiary_type": "Campaign",
         "beneficiary_id": "111222333444555",
         "amount": 7,
