@@ -8,6 +8,7 @@ toc_footers:
   - <a href='mailto:support@amploadvance.com'>Contact Support For API Access</a>
 
 includes:
+  - webhooks
   - errors
 
 search: true
