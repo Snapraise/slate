@@ -264,7 +264,7 @@ We want to ensure system resources are going to the right place - ensuring your
 giving day is successful.</p>
 
 <h1 id="authentication">Authentication</h1>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/campaigns"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/campaigns"</span>
   -H <span class="s2">"Authorization: 12345123451234512345"</span>
 </code></pre>
 <p>Please <a href="mailto:support@amploadvance.com">contact support</a> to have an
@@ -282,7 +282,7 @@ You must replace <code>12345123451234512345</code> with your personal API key.
 <h1 id="campaigns">Campaigns</h1>
 
 <h2 id="list-campaigns">List Campaigns</h2>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/campaigns"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/campaigns"</span>
   -H <span class="s2">"Authorization: 12345123451234512345"</span>
 </code></pre>
 <blockquote>
@@ -326,7 +326,7 @@ You must replace <code>12345123451234512345</code> with your personal API key.
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://app.amploadvance.com/api/v1/campaigns</code></p>
+<p><code class="prettyprint">GET https://api.amploadvance.com/api/v1/campaigns</code></p>
 
 <h3 id="get-parameters">GET Parameters</h3>
 
@@ -355,7 +355,7 @@ On the Amplo API, the first page is page number 0!
 </aside>
 
 <h2 id="get-a-specific-campaign">Get a Specific Campaign</h2>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/campaigns/abcdefabcedfabcedf"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/campaigns/abcdefabcedfabcedf"</span>
   -H <span class="s2">"Authorization: 12345123451234512345"</span>
 </code></pre>
 <blockquote>
@@ -392,7 +392,7 @@ On the Amplo API, the first page is page number 0!
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://app.amploadvance.com/api/v1/campaigns/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET https://api.amploadvance.com/api/v1/campaigns/&lt;ID&gt;</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -411,7 +411,7 @@ On the Amplo API, the first page is page number 0!
 <h1 id="users">Users</h1>
 
 <h2 id="get-a-specific-user-by-email">Get a Specific User By Email</h2>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/users/api@amploadvance.com"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/users/api@amploadvance.com"</span>
   -H <span class="s2">"Authorization: 12345123451234512345"</span>
 </code></pre>
 <blockquote>
@@ -454,7 +454,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://app.amploadvance.com/api/v1/users/&lt;EMAIL&gt;</code></p>
+<p><code class="prettyprint">GET https://api.amploadvance.com/api/v1/users/&lt;EMAIL&gt;</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -471,7 +471,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 </tbody></table>
 
 <h2 id="create-a-new-user">Create a New User</h2>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/users"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/users"</span>
   -XPOST
   -d <span class="s1">'first_name=Joe'</span>
   -d <span class="s1">'last_name=Smith'</span>
@@ -503,7 +503,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://app.amploadvance.com/api/v1/users</code></p>
+<p><code class="prettyprint">POST https://api.amploadvance.com/api/v1/users</code></p>
 
 <h3 id="http-post-parameters">HTTP POST Parameters</h3>
 
@@ -544,9 +544,9 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 <h1 id="donations">Donations</h1>
 
 <h2 id="list-donations">List Donations</h2>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/donations"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/donations"</span>
   -H <span class="s2">"Authorization: 12345123451234512345"</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/campaigns/asdfasdfasdfasdf/donations"</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/campaigns/asdfasdfasdfasdf/donations"</span>
   -H <span class="s2">"Authorization: 12345123451234512345"</span>
 </code></pre>
 <blockquote>
@@ -596,11 +596,11 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 
 <p>This URL will fetch all donations for all Campaigns:</p>
 
-<p><code class="prettyprint">GET https://app.amploadvance.com/api/v1/donations</code></p>
+<p><code class="prettyprint">GET https://api.amploadvance.com/api/v1/donations</code></p>
 
 <p>This URL will fetch only donations made towards a specific Campaign:</p>
 
-<p><code class="prettyprint">GET https://app.amploadvance.com/api/v1/campaigns/&lt;CAMPAIGN_ID&gt;/donations</code></p>
+<p><code class="prettyprint">GET https://api.amploadvance.com/api/v1/campaigns/&lt;CAMPAIGN_ID&gt;/donations</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -678,7 +678,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 <p>Default Sort Order: The Object&rsquo;s last updated at timestamp in descending order.</p>
 
 <h2 id="get-a-specific-donation">Get a Specific Donation</h2>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/donations/abcdefabcedfabcedf"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/donations/abcdefabcedfabcedf"</span>
   -H <span class="s2">"Authorization: 12345123451234512345"</span>
 </code></pre>
 <blockquote>
@@ -718,7 +718,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET https://app.amploadvance.com/api/v1/donations/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET https://api.amploadvance.com/api/v1/donations/&lt;ID&gt;</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -735,7 +735,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 </tbody></table>
 
 <h2 id="create-a-new-donation">Create a New Donation</h2>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/campaigns/111222333444555/donations"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/campaigns/111222333444555/donations"</span>
   -XPOST
   -d <span class="s1">'user_id=aabbccddeeffgg'</span>
   -d <span class="s1">'external_id=1234_asdf'</span>
@@ -784,7 +784,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST https://app.amploadvance.com/api/v1/campaigns/&lt;CAMPAIGN_ID&gt;/donations</code></p>
+<p><code class="prettyprint">POST https://api.amploadvance.com/api/v1/campaigns/&lt;CAMPAIGN_ID&gt;/donations</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -927,8 +927,16 @@ be equivalent to what you would get on a single object GET request.  ID and Type
 can be used to distinguish the nature of the data, since all objects are posted to the same
 single Webhook URL.  </p>
 
+<h3 id="rate-limits">Rate Limits</h3>
+
+<p>Webhook callbacks do not count towards the regular API rate limits. However, Webhook
+callbacks are processed in near real-time, which means that while Webhook callbacks are initiated
+at the time of the event, there might be some delay before a Webhook callback fully
+completes and POSTs to the URL.  This is because Amplo will always process Webhook
+callbacks at a lower priority level to anything core to ensuring a successful Giving Day.</p>
+
           <h1 id="errors">Errors</h1>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://app.amploadvance.com/api/v1/campaigns"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/api/v1/campaigns"</span>
 </code></pre>
 <blockquote>
 <p>The above command, missing a header on the request, will return a 401 response with the following JSON:</p>
