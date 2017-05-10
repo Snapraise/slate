@@ -364,7 +364,7 @@ On the Amplo API, the first page is page number 0!
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcdefabcedfabcedf"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaign"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"campaigns"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amplo University Campaign 2"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://amplouniversity.com/pages/campaign-2-page"</span><span class="p">,</span><span class="w">
@@ -420,7 +420,7 @@ On the Amplo API, the first page is page number 0!
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111222333444555"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Joe"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
@@ -429,7 +429,7 @@ On the Amplo API, the first page is page number 0!
       </span><span class="s2">"donations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donations"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"beneficiary_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Campaign"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"beneficiary_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111222333444555"</span><span class="p">,</span><span class="w">
@@ -485,7 +485,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111222333444555"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Joe"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
@@ -556,7 +556,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
   </span><span class="s2">"data"</span><span class="p">:[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donations"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"beneficiary_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Campaign"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"beneficiary_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111222333444555"</span><span class="p">,</span><span class="w">
@@ -570,7 +570,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11223344556677"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donations"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"beneficiary_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Campaign"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"beneficiary_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111222333444555"</span><span class="p">,</span><span class="w">
@@ -687,7 +687,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donations"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:{</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1122334455667788"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"beneficiary_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Campaign"</span><span class="p">,</span><span class="w">
@@ -751,7 +751,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09876543210987654321"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donations"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
@@ -850,7 +850,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donations"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:{</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1122334455667788"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"beneficiary_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Campaign"</span><span class="p">,</span><span class="w">
@@ -882,7 +882,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aabbccddeeffgg"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donation"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"donations"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:{</span><span class="w">
       </span><span class="s2">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1494355936</span><span class="p">,</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -897,7 +897,10 @@ push-based (when something interesting in the system happens, we let you know).<
 <p>For example, when a Donation happens in Amplo&rsquo;s system, the Amplo API will POST related
 JSON data to your registered Webhook URL for your immediate consumption (a.k.a. a callback).  </p>
 
-<p>Webhook URLs can be registered on the Entity level.  Contact support to set one up.</p>
+<p>Webhook URLs can be registered on the Entity level.  SSL is required.  The endpoint provided
+must directly consume the data without redirection, and return a <code class="prettyprint">200 OK</code> upon success.  </p>
+
+<p>Contact support to set one up.</p>
 
 <h3 id="events">Events</h3>
 
