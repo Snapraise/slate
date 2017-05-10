@@ -265,7 +265,7 @@ giving day is successful.</p>
 
 <h1 id="authentication">Authentication</h1>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/v1/campaigns"</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <p>Please <a href="mailto:support@amploadvance.com">contact support</a> to have an
 API key provisioned for you.</p>
@@ -273,7 +273,7 @@ API key provisioned for you.</p>
 <p>Amplo expects for the API key to be included in all API requests to the server
 in a header that looks like the following:</p>
 
-<p><code class="prettyprint">Authorization: 12345123451234512345</code></p>
+<p><code class="prettyprint">Authorization: Token token=12345123451234512345</code></p>
 
 <aside class="notice">
 You must replace <code>12345123451234512345</code> with your personal API key.
@@ -283,7 +283,7 @@ You must replace <code>12345123451234512345</code> with your personal API key.
 
 <h2 id="list-campaigns">List Campaigns</h2>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/v1/campaigns"</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -356,7 +356,7 @@ On the Amplo API, the first page is page number 0!
 
 <h2 id="get-a-specific-campaign">Get a Specific Campaign</h2>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/v1/campaigns/abcdefabcedfabcedf"</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -412,7 +412,7 @@ On the Amplo API, the first page is page number 0!
 
 <h2 id="get-a-specific-user-by-email">Get a Specific User By Email</h2>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/v1/users/api@amploadvance.com"</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -477,7 +477,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
   -d <span class="s1">'last_name=Smith'</span>
   -d <span class="s1">'email=api@amploadvance.com'</span>
   -d <span class="s1">'external_id=1234_asdf'</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -545,9 +545,9 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 
 <h2 id="list-donations">List Donations</h2>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/v1/donations"</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/v1/campaigns/asdfasdfasdfasdf/donations"</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <blockquote>
 <p>The above commands returns JSON structured like this:</p>
@@ -679,7 +679,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
 
 <h2 id="get-a-specific-donation">Get a Specific Donation</h2>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.amploadvance.com/v1/donations/abcdefabcedfabcedf"</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -743,7 +743,7 @@ be able to paginate through results using the <code class="prettyprint">page</co
   -d <span class="s1">'status=paid'</span>
   -d <span class="s1">'donation_type=cash'</span>
   -d <span class="s1">'public=true'</span>
-  -H <span class="s2">"Authorization: 12345123451234512345"</span>
+  -H <span class="s2">"Authorization: Token token=12345123451234512345"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
