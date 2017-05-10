@@ -58,7 +58,7 @@ giving day is successful.
 
 ```shell
 curl "https://api.amploadvance.com/v1/campaigns"
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 
@@ -68,7 +68,7 @@ API key provisioned for you.
 Amplo expects for the API key to be included in all API requests to the server
 in a header that looks like the following:
 
-`Authorization: 12345123451234512345`
+`Authorization: Token token=12345123451234512345`
 
 <aside class="notice">
 You must replace <code>12345123451234512345</code> with your personal API key.
@@ -81,7 +81,7 @@ You must replace <code>12345123451234512345</code> with your personal API key.
 
 ```shell
 curl "https://api.amploadvance.com/v1/campaigns"
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 > The above command returns JSON structured like this:
@@ -144,7 +144,7 @@ On the Amplo API, the first page is page number 0!
 
 ```shell
 curl "https://api.amploadvance.com/v1/campaigns/abcdefabcedfabcedf"
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 > The above command returns JSON structured like this:
@@ -196,7 +196,7 @@ ID | The ID of the Campaign to retrieve
 
 ```shell
 curl "https://api.amploadvance.com/v1/users/api@amploadvance.com"
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 > The above command returns JSON structured like this:
@@ -257,7 +257,7 @@ curl "https://api.amploadvance.com/v1/users"
   -d 'last_name=Smith'
   -d 'email=api@amploadvance.com'
   -d 'external_id=1234_asdf'
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 > The above command returns JSON structured like this:
@@ -307,12 +307,12 @@ external_id | false | **string** | External ID can be used to link this User to 
 
 ```shell
 curl "https://api.amploadvance.com/v1/donations"
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 ```shell
 curl "https://api.amploadvance.com/v1/campaigns/asdfasdfasdfasdf/donations"
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 > The above commands returns JSON structured like this:
@@ -410,7 +410,7 @@ Default Sort Order: The Object's last updated at timestamp in descending order.
 
 ```shell
 curl "https://api.amploadvance.com/v1/donations/abcdefabcedfabcedf"
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 > The above command returns JSON structured like this:
@@ -470,7 +470,7 @@ curl "https://api.amploadvance.com/v1/campaigns/111222333444555/donations"
   -d 'status=paid'
   -d 'donation_type=cash'
   -d 'public=true'
-  -H "Authorization: 12345123451234512345"
+  -H "Authorization: Token token=12345123451234512345"
 ```
 
 > The above command returns JSON structured like this:
