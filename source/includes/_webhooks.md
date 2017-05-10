@@ -6,7 +6,7 @@
 {
   "data": {
     "id": "aabbccddeeffgg",
-    "type": "donation",
+    "type": "donations",
     "attributes":{
       "user_id": "1122334455667788",
       "beneficiary_type": "Campaign",
@@ -39,7 +39,7 @@
 {
   "data": {
     "id": "aabbccddeeffgg",
-    "type": "donation",
+    "type": "donations",
     "attributes":{
       "deleted_at": 1494355936,
     }
@@ -55,7 +55,10 @@ push-based (when something interesting in the system happens, we let you know).
 For example, when a Donation happens in Amplo's system, the Amplo API will POST related
 JSON data to your registered Webhook URL for your immediate consumption (a.k.a. a callback).  
 
-Webhook URLs can be registered on the Entity level.  Contact support to set one up.
+Webhook URLs can be registered on the Entity level.  SSL is required.  The endpoint provided
+must directly consume the data without redirection, and return a `200 OK` upon success.  
+
+Contact support to set one up.
 
 ### Events
 

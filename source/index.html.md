@@ -153,7 +153,7 @@ curl "https://api.amploadvance.com/v1/campaigns/abcdefabcedfabcedf"
 {
   "data": {
     "id": "abcdefabcedfabcedf",
-    "type": "campaign",
+    "type": "campaigns",
     "attributes": {
       "name": "Amplo University Campaign 2",
       "url": "https://amplouniversity.com/pages/campaign-2-page",
@@ -205,7 +205,7 @@ curl "https://api.amploadvance.com/v1/users/api@amploadvance.com"
 {
   "data": {
     "id": "111222333444555",
-    "type": "user",
+    "type": "users",
     "attributes": {
       "first_name": "Joe",
       "last_name": "Smith",
@@ -214,7 +214,7 @@ curl "https://api.amploadvance.com/v1/users/api@amploadvance.com"
       "donations": {
         "data": [{
           "id": "aabbccddeeffgg",
-          "type": "donation",
+          "type": "donations",
           "attributes": {
             "beneficiary_type": "Campaign",
             "beneficiary_id": "111222333444555",
@@ -266,7 +266,7 @@ curl "https://api.amploadvance.com/v1/users"
 {
   "data":{
     "id": "111222333444555",
-    "type": "user",
+    "type": "users",
     "attributes": {
       "first_name": "Joe",
       "last_name": "Smith",
@@ -322,7 +322,7 @@ curl "https://api.amploadvance.com/v1/campaigns/asdfasdfasdfasdf/donations"
   "data":[
     {
       "id": "aabbccddeeffgg",
-      "type": "donation",
+      "type": "donations",
       "attributes": {
         "beneficiary_type": "Campaign",
         "beneficiary_id": "111222333444555",
@@ -336,7 +336,7 @@ curl "https://api.amploadvance.com/v1/campaigns/asdfasdfasdfasdf/donations"
     },
     {
       "id": "11223344556677",
-      "type": "donation",
+      "type": "donations",
       "attributes": {
         "beneficiary_type": "Campaign",
         "beneficiary_id": "111222333444555",
@@ -419,7 +419,7 @@ curl "https://api.amploadvance.com/v1/donations/abcdefabcedfabcedf"
 {
   "data": {
     "id": "aabbccddeeffgg",
-    "type": "donation",
+    "type": "donations",
     "attributes":{
       "user_id": "1122334455667788",
       "beneficiary_type": "Campaign",
@@ -479,7 +479,7 @@ curl "https://api.amploadvance.com/v1/campaigns/111222333444555/donations"
 {
   "data": {
     "id": "09876543210987654321",
-    "type": "donation",
+    "type": "donations",
     "attributes": {
       "user_id": "aabbccddeeffgg",
       "amount": 10,
