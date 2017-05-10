@@ -74,3 +74,11 @@ The POSTed JSON data will largely follow the same format as the main API.  The d
 be equivalent to what you would get on a single object GET request.  ID and Type fields
 can be used to distinguish the nature of the data, since all objects are posted to the same
 single Webhook URL.  
+
+### Rate Limits
+
+Webhook callbacks do not count towards the regular API rate limits. However, Webhook
+callbacks are processed in near real-time, which means that while Webhook callbacks are initiated
+at the time of the event, there might be some delay before a Webhook callback fully
+completes and POSTs to the URL.  This is because Amplo will always process Webhook
+callbacks at a lower priority level to anything core to ensuring a successful Giving Day.

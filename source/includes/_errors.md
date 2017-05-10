@@ -2,7 +2,7 @@
 
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/campaigns"
+curl "https://api.amploadvance.com/api/v1/campaigns"
 ```
 
 > The above command, missing a header on the request, will return a 401 response with the following JSON:

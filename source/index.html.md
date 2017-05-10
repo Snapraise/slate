@@ -57,7 +57,7 @@ giving day is successful.
 # Authentication
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/campaigns"
+curl "https://api.amploadvance.com/api/v1/campaigns"
   -H "Authorization: 12345123451234512345"
 ```
 
@@ -80,7 +80,7 @@ You must replace <code>12345123451234512345</code> with your personal API key.
 
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/campaigns"
+curl "https://api.amploadvance.com/api/v1/campaigns"
   -H "Authorization: 12345123451234512345"
 ```
 
@@ -126,7 +126,7 @@ This endpoint retrieves all campaigns.
 
 ### HTTP Request
 
-`GET https://app.amploadvance.com/api/v1/campaigns`
+`GET https://api.amploadvance.com/api/v1/campaigns`
 
 ### GET Parameters
 
@@ -143,7 +143,7 @@ On the Amplo API, the first page is page number 0!
 ## Get a Specific Campaign
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/campaigns/abcdefabcedfabcedf"
+curl "https://api.amploadvance.com/api/v1/campaigns/abcdefabcedfabcedf"
   -H "Authorization: 12345123451234512345"
 ```
 
@@ -182,7 +182,7 @@ This endpoint retrieves a specific campaign.
 
 ### HTTP Request
 
-`GET https://app.amploadvance.com/api/v1/campaigns/<ID>`
+`GET https://api.amploadvance.com/api/v1/campaigns/<ID>`
 
 ### URL Parameters
 
@@ -195,7 +195,7 @@ ID | The ID of the Campaign to retrieve
 ## Get a Specific User By Email
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/users/api@amploadvance.com"
+curl "https://api.amploadvance.com/api/v1/users/api@amploadvance.com"
   -H "Authorization: 12345123451234512345"
 ```
 
@@ -240,7 +240,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 
 ### HTTP Request
 
-`GET https://app.amploadvance.com/api/v1/users/<EMAIL>`
+`GET https://api.amploadvance.com/api/v1/users/<EMAIL>`
 
 ### URL Parameters
 
@@ -251,7 +251,7 @@ EMAIL | The full, unescaped email address for this User.
 ## Create a New User
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/users"
+curl "https://api.amploadvance.com/api/v1/users"
   -XPOST
   -d 'first_name=Joe'
   -d 'last_name=Smith'
@@ -285,7 +285,7 @@ endpoint provides.  To find more detail on a Donation, use the Donation show end
 
 ### HTTP Request
 
-`POST https://app.amploadvance.com/api/v1/users`
+`POST https://api.amploadvance.com/api/v1/users`
 
 ### HTTP POST Parameters
 
@@ -306,12 +306,12 @@ external_id | false | **string** | External ID can be used to link this User to 
 
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/donations"
+curl "https://api.amploadvance.com/api/v1/donations"
   -H "Authorization: 12345123451234512345"
 ```
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/campaigns/asdfasdfasdfasdf/donations"
+curl "https://api.amploadvance.com/api/v1/campaigns/asdfasdfasdfasdf/donations"
   -H "Authorization: 12345123451234512345"
 ```
 
@@ -363,11 +363,11 @@ These endpoint retrieves a paginated list of donations.
 
 This URL will fetch all donations for all Campaigns:
 
-`GET https://app.amploadvance.com/api/v1/donations`
+`GET https://api.amploadvance.com/api/v1/donations`
 
 This URL will fetch only donations made towards a specific Campaign:
 
-`GET https://app.amploadvance.com/api/v1/campaigns/<CAMPAIGN_ID>/donations`
+`GET https://api.amploadvance.com/api/v1/campaigns/<CAMPAIGN_ID>/donations`
 
 ### URL Parameters
 
@@ -409,7 +409,7 @@ Default Sort Order: The Object's last updated at timestamp in descending order.
 ## Get a Specific Donation
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/donations/abcdefabcedfabcedf"
+curl "https://api.amploadvance.com/api/v1/donations/abcdefabcedfabcedf"
   -H "Authorization: 12345123451234512345"
 ```
 
@@ -451,7 +451,7 @@ This endpoint retrieves a specific Donation.
 
 ### HTTP Request
 
-`GET https://app.amploadvance.com/api/v1/donations/<ID>`
+`GET https://api.amploadvance.com/api/v1/donations/<ID>`
 
 ### URL Parameters
 
@@ -462,7 +462,7 @@ ID | The ID of the Campaign to retrieve
 ## Create a New Donation
 
 ```shell
-curl "https://app.amploadvance.com/api/v1/campaigns/111222333444555/donations"
+curl "https://api.amploadvance.com/api/v1/campaigns/111222333444555/donations"
   -XPOST
   -d 'user_id=aabbccddeeffgg'
   -d 'external_id=1234_asdf'
@@ -511,7 +511,7 @@ This endpoint creates a new Donation in Amplo.  A few assumptions are made:
 
 ### HTTP Request
 
-`POST https://app.amploadvance.com/api/v1/campaigns/<CAMPAIGN_ID>/donations`
+`POST https://api.amploadvance.com/api/v1/campaigns/<CAMPAIGN_ID>/donations`
 
 ### URL Parameters
 
