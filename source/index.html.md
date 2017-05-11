@@ -527,6 +527,5 @@ user_id | true | **string** | The Amplo User ID associated with the User who mad
 campaign_id | true | **string** | The Amplo Campaign ID associated with the Campaign to which this Donation was made.
 amount | true | **float** | Donation amount in dollars
 donation_type | true | **string** | Donation Type - Can be "cc", "cash", or "check"
-donation_type | true | **string** | Donation Type - Can be "cc", "cash", or "check"
 public | false | **boolean** | Is this Donation public?  Defaults to true.
 external_id | false | **string** | External ID can be used to link this Donation to another external software system for recordkeeping purposes.
