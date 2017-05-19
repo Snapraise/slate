@@ -91,27 +91,33 @@ curl "https://api.amploadvance.com/v1/campaigns"
   "data": [
     {
       "id": "asdfasdfasdfasdf",
-      "name": "Amplo University Campaign 1",
-      "url": "https://amplouniversity.com/pages/campaign-1-page",
-      "start_date": 1494278379,
-      "end_date": 149428000,
-      "status": "active",
-      "total_votes": 10,
-      "total_donations": 10,
-      "total_raised": 300,
-      "external_id": "abc_123"
+      "type": "campaigns",
+      "attributes": {
+        "name": "Amplo University Campaign 1",
+        "url": "https://amplouniversity.com/pages/campaign-1-page",
+        "start_date": 1494278379,
+        "end_date": 149428000,
+        "status": "active",
+        "total_votes": 10,
+        "total_donations": 10,
+        "total_raised": 300,
+        "external_id": "abc_123"
+      }
     },
     {
       "id": "111222333444555",
-      "name": "Amplo University Campaign 2",
-      "url": "https://amplouniversity.com/pages/campaign-2-page",
-      "start_date": 1494278379,
-      "end_date": 149428000,
-      "status": "active",
-      "total_votes": 11,
-      "total_donations": 11,
-      "total_raised": 270,
-      "external_id": "abc_123"
+      "type": "campaigns",
+      "attributes": {
+        "name": "Amplo University Campaign 2",
+        "url": "https://amplouniversity.com/pages/campaign-2-page",
+        "start_date": 1494278379,
+        "end_date": 149428000,
+        "status": "active",
+        "total_votes": 11,
+        "total_donations": 11,
+        "total_raised": 270,
+        "external_id": "abc_123"
+      }
     }
   ],
   "meta":{
@@ -526,6 +532,5 @@ Parameter | Required? | Type | Description
 user_id | true | **string** | The Amplo User ID associated with the User who made this Donation.
 campaign_id | true | **string** | The Amplo Campaign ID associated with the Campaign to which this Donation was made.
 amount | true | **float** | Donation amount in dollars
-donation_type | true | **string** | Donation Type - Can be "cc", "cash", or "check"
 public | false | **boolean** | Is this Donation public?  Defaults to true.
 external_id | false | **string** | External ID can be used to link this Donation to another external software system for recordkeeping purposes.
