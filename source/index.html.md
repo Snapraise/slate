@@ -221,7 +221,7 @@ curl "https://api.amploadvance.com/v1/users/api@amploadvance.com"
         "data": [{
           "id": "aabbccddeeffgg",
           "type": "donations",
-          "attributes": {
+          "attributes":{
             "beneficiary_type": "Campaign",
             "beneficiary_id": "111222333444555",
             "amount": 10,
@@ -229,7 +229,46 @@ curl "https://api.amploadvance.com/v1/users/api@amploadvance.com"
             "public": true,
             "donation_type": "cc",
             "external_id": "import_1234",
-            "recurring": false
+            "recurring": false,
+            "auth_code": "123456",
+            "transact_id": "abcdefg",
+            "note": "I love Amplo U",
+            "check_number": null,
+            "credit_card_fingerprint": "aaaaabbbbbcccccdddddeeeee",
+            "tickets": [],
+            "refunded": false,
+            "refundable": true,
+            "refund_donation_ids": [],
+            "appeal": null,
+            "affinities": "alumni, parents",
+            "grad_year": "1983",
+            "on_behalf_of": null,    
+            "donor_first_name": "John",
+            "donor_last_name": "Smith",
+            "donor_email": "test@test.com",
+            "donor_phone": "123-123-1234",
+            "donor_address1": "1234 Main St",
+            "donor_address2": null,
+            "donor_address3": null,
+            "donor_city": "Chicago",
+            "donor_region": "IL",
+            "donor_zip": "12345",
+            "donor_country": "United States",
+            "donor_country_code": "USA",
+            "card_last_4": "4242",
+            "recurring": false,
+            "created_at": 1498806295,
+            "causes":{
+              "data": [{
+                "id": "000999888777",
+                "type": "causes",
+                "attributes": {
+                  "name": "Cause Name 1",
+                  "external_id": "0001234",
+                  "amount": 10
+                }
+              }]
+            }
           }
         }]
       }
@@ -598,7 +637,47 @@ curl "https://api.amploadvance.com/v1/campaigns/111222333444555/donations"
       "status": "paid",
       "public": true,
       "donation_type": "cc",
-      "external_id": "import_1234"
+      "external_id": "import_1234",
+      "recurring": false,
+      "auth_code": "123456",
+      "transact_id": "abcdefg",
+      "note": "I love Amplo U",
+      "check_number": null,
+      "credit_card_fingerprint": "aaaaabbbbbcccccdddddeeeee",
+      "tickets": [],
+      "refunded": false,
+      "refundable": true,
+      "refund_donation_ids": [],
+      "appeal": null,
+      "affinities": "alumni, parents",
+      "grad_year": "1983",
+      "on_behalf_of": null,    
+      "donor_first_name": "John",
+      "donor_last_name": "Smith",
+      "donor_email": "test@test.com",
+      "donor_phone": "123-123-1234",
+      "donor_address1": "1234 Main St",
+      "donor_address2": null,
+      "donor_address3": null,
+      "donor_city": "Chicago",
+      "donor_region": "IL",
+      "donor_zip": "12345",
+      "donor_country": "United States",
+      "donor_country_code": "USA",
+      "card_last_4": "4242",
+      "recurring": false,
+      "created_at": 1498806295,
+      "causes":{
+        "data": [{
+          "id": "000999888777",
+          "type": "causes",
+          "attributes": {
+            "name": "Cause Name 1",
+            "external_id": "0001234",
+            "amount": 10
+          }
+        }]
+      }
     }
   }
 }
