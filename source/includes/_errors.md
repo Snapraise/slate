@@ -16,7 +16,7 @@ curl "https://api.amploadvance.com/v1/campaigns"
 }
 ```
 
-The Amplo API uses the following error codes:
+The Snap Advance uses the following error codes:
 
 Error Code | Meaning
 ---------- | -------

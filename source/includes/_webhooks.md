@@ -19,7 +19,7 @@
       "recurring": false,
       "auth_code": "123456",
       "transact_id": "abcdefg",
-      "note": "I love Amplo U",
+      "note": "I love Snap Advance U",
       "check_number": null,
       "credit_card_fingerprint": "aaaaabbbbbcccccdddddeeeee",
       "tickets": [],
@@ -47,12 +47,12 @@
 }
 ```
 
-Webhooks allow Amplo to push data into your system in a near real-time capacity.
+Webhooks allow Snap Advance to push data into your system in a near real-time capacity.
 This allows you to supplement your API usage or fully change the dynamic of your API
 usage from primarily pull-based (you make a request, we send the data back) to
 push-based (when something interesting in the system happens, we let you know).
 
-For example, when a Donation happens in Amplo's system, the Amplo API will POST related
+For example, when a Donation happens in Snap Advance's system, the Snap Advance API will POST related
 JSON data to your registered Webhook URL for your immediate consumption (a.k.a. a callback).  
 
 Webhook URLs can be registered on the Entity level.  SSL is required.  The endpoint provided
@@ -83,5 +83,5 @@ single Webhook URL.
 Webhook callbacks do not count towards the regular API rate limits. However, Webhook
 callbacks are processed in near real-time, which means that while Webhook callbacks are initiated
 at the time of the event, there might be some delay before a Webhook callback fully
-completes and POSTs to the URL.  This is because Amplo will always process Webhook
+completes and POSTs to the URL.  This is because Snap Advance will always process Webhook
 callbacks at a lower priority level to anything core to ensuring a successful Giving Day.
