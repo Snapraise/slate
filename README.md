@@ -1,3 +1,8 @@
+# slate
+* To deploy: Run `./deploy.sh`
+  * This will compile and push to `gh-pages` branch, which is a Github-hosted static page, available at https://snapraise.github.io/slate
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
   <br>
