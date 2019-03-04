@@ -11,7 +11,6 @@ includes:
   - campaigns
   - users
   - donations
-  - transactions
   - webhooks
   - errors
 

@@ -367,13 +367,7 @@ This endpoint creates a new Donation in Snap Advance.  A few assumptions are mad
 
 ### HTTP Request
 
-`POST https://api.amploadvance.com/v1/campaigns/<CAMPAIGN_ID>/donations`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-CAMPAIGN_ID | The ID of the Campaign this Donation belongs to
+`POST https://api.amploadvance.com/v1/donations`
 
 ### HTTP POST Parameters
 
